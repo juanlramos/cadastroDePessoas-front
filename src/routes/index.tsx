@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import { Error, Home } from "../pages";
+import { Error, Home, Auth } from "../pages";
 
 export const AppRoutes = () => {
   return (
@@ -9,6 +9,7 @@ export const AppRoutes = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="*" element={<Error />} />
+        <Route path="/login" element={<Auth />} />
       </Routes>
     </BrowserRouter>
   );
