@@ -15,7 +15,7 @@ export const RegisterForm = () => {
       variant="outlined"
       padding={3}
       sx={{
-        maxWidth: 400,
+        maxWidth: { xs: 250, sm: 400 },
         width: "100%",
       }}
     >
@@ -24,12 +24,12 @@ export const RegisterForm = () => {
           Register
         </Typography>
 
-        <Grid container spacing={2} direction="row">
-          <Grid size={6}>
+        <Grid container spacing={2} direction={{ xs: "column", sm: "row" }}>
+          <Grid size={{ sm: 6 }}>
             <TextField variant="outlined" label="Name" fullWidth></TextField>
           </Grid>
 
-          <Grid size={6}>
+          <Grid size={{ sm: 6 }}>
             <TextField variant="outlined" type="date" fullWidth></TextField>
           </Grid>
         </Grid>

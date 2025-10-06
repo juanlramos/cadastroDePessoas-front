@@ -4,7 +4,7 @@ import { useState } from "react";
 import { LoginForm, RegisterForm } from "./components";
 
 export const Auth = () => {
-  const [isRegister, setIsRegister] = useState(true);
+  const [isRegister, setIsRegister] = useState(false);
 
   return (
     <Box

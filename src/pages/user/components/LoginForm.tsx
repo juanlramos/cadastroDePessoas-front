@@ -11,12 +11,10 @@ export const LoginForm = () => {
   return (
     <Box
       component={Paper}
-      variant="elevation"
+      variant="outlined"
       padding={3}
-      display="flex"
-      flexDirection="column"
       sx={{
-        maxWidth: 400,
+        maxWidth: {xs: 250, sm: 400},
         width: "100%",
       }}
     >
