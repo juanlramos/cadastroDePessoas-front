@@ -22,9 +22,12 @@ export const registerSchema = z.object({
     .string()
     .nonempty()
     .min(8, "Password must have at least 8 characteres."),
-  birth: z.coerce //transforma uma string em data
-    .date({
-      message: "Invalid date format",
-    })
-    .max(new Date(), "Date cannot be in the future."),
+  birth: z
+    .string()
+    .nonempty("Birth date is required")
+    .refine((val) => !isNaN(Date.parse(val)), "Invalid date format")
+    .refine(
+      (val) => new Date(val) <= new Date(),
+      "Date cannot be in the future."
+    ),
 });
